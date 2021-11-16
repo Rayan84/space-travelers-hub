@@ -2,22 +2,22 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Routes,
+  Link,
   Route
 } from 'react-router-dom';
+import Rockets from './Rockets';
 
 const Nav = () => {
   return (
     <Router>
       <ul>
-        <li></li>
+        <li><Link to="/">Rockets</Link></li>
         <li></li>
       </ul>
       <Routes>
-        <Route>
-        </Route>
+        <Route path="/" element={<Rockets />} />
       </Routes>
     </Router>
-
   )
 }
 
