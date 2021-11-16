@@ -3,22 +3,20 @@ import {
   BrowserRouter as Router,
   Routes,
   Link,
-  Route
+  Route,
 } from 'react-router-dom';
 import Rockets from './Rockets';
 
-const Nav = () => {
-  return (
+const Nav = () => (
     <Router>
       <ul>
         <li><Link to="/">Rockets</Link></li>
-        <li></li>
+        <li />
       </ul>
       <Routes>
         <Route path="/" element={<Rockets />} />
       </Routes>
     </Router>
-  )
-}
+  );
 
 export default Nav;
