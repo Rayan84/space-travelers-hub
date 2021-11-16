@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Routes,
-  Link,
+  NavLink,
   Route,
 } from 'react-router-dom';
 import Rockets from './Rockets';
@@ -10,11 +10,11 @@ import Rockets from './Rockets';
 const Nav = () => (
   <Router>
     <ul>
-      <li><Link to="/">Rockets</Link></li>
+      <li><NavLink to="/">Rockets</NavLink></li>
       <li />
     </ul>
-  <Routes>
-    <Route path="/" element={<Rockets />} />
+    <Routes>
+      <Route path="/" element={<Rockets />} />
     </Routes>
   </Router>
 );
