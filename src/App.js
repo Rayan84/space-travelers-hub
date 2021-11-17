@@ -1,5 +1,5 @@
-import './App.css';
-import Nav from './components/Nav';
+import "./App.css";
+import Nav from "./components/Nav";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <Nav />
       </header>
-        <img src="logo.png" className="App-logo" alt="logo" />
+      <img src="logo.png" className="App-logo" alt="logo" />
     </div>
   );
 }
