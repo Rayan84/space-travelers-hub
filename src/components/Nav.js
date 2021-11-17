@@ -6,17 +6,36 @@ import {
   Route,
 } from 'react-router-dom';
 import Rockets from './Rockets';
+import Reservations from './Reservations';
 
-const Nav = () => (
+const Nav = () => {
+  function linkStyle(num) {
+    let links = document.querySelectorAll('.nav-link');   
+    for (let i = 0; i < links.length; i++){
+      if(i !== num){
+        links[i].style.color = 'coral';
+      }else{
+        links[i].style.color = 'red';
+      }
+    }
+  };
+
+return(
   <Router>
-    <ul>
-      <li><NavLink to="/">Rockets</NavLink></li>
-      <li />
+    <>
+    <ul className="navbar">
+      <li><NavLink to="/rockets" className="nav-link" onClick={() => {linkStyle(0)}}>Rockets</NavLink></li>
+      <li><NavLink to="/reservations" className="nav-link" onClick={() => {linkStyle(1)}}>Reservations</NavLink></li>
     </ul>
+    </>
     <Routes>
+      <Route path="/rockets" element={<Rockets />} />
+      <Route path="/reservations" element={<Reservations />} />
       <Route path="/" element={<Rockets />} />
+
     </Routes>
   </Router>
 );
+      };
 
 export default Nav;

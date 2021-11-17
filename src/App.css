@@ -7,6 +7,19 @@
   pointer-events: none;
 }
 
+.navbar {
+  display: flex;
+}
+
+.navbar li {
+  list-style: none;
+  margin: 15px;
+}
+
+.nav-link {
+  color: coral;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -15,7 +28,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +44,8 @@
   from {
     transform: rotate(0deg);
   }
-  to { 
+
+  to {
     transform: rotate(360deg);
   }
 }
