@@ -1,15 +1,20 @@
-import logo from './logo.svg';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
+import Missions from './components/Missions';
+import MyProfile from './components/MyProfile';
 import Nav from './components/Nav';
+import Rocket from './components/Rocket';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Nav />
-        <img src="logo.png" className="App-logo" alt="logo" />
-      </header>
-    </div>
+    <Router>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Rocket />} />
+        <Route path="/missions" element={<Missions />} />
+        <Route path="/my-profile" element={<MyProfile />} />
+      </Routes>
+    </Router>
   );
 }
 
