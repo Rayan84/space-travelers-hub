@@ -13,9 +13,9 @@ const Nav = () => {
     let links = document.querySelectorAll('.nav-link');   
     for (let i = 0; i < links.length; i++){
       if(i !== num){
-        links[i].style.color = 'coral';
+        links[i].style.textDecoration = 'none';
       }else{
-        links[i].style.color = 'red';
+        links[i].style.textDecoration = 'underline';
       }
     }
   };

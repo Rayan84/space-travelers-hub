@@ -18,6 +18,7 @@
 
 .nav-link {
   color: coral;
+  text-decoration: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
