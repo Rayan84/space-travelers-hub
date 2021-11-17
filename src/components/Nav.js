@@ -36,6 +36,6 @@ return(
     </Routes>
   </Router>
 );
-      };
+};
 
 export default Nav;
