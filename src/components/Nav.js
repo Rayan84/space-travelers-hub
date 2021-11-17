@@ -11,7 +11,7 @@ import Missions from './Missions';
 const Nav = () => {
   function linkStyle(num) {
     const links = document.querySelectorAll('.nav-link');
-    for (let i = 0; i < links.length; i+= 1) {
+    for (let i = 0; i < links.length; i += 1) {
       if (i !== num) {
         links[i].style.textDecoration = 'none';
       } else {
@@ -24,8 +24,8 @@ const Nav = () => {
     <Router>
       <>
         <ul className="navbar">
-          <li><NavLink to="/rockets" className="nav-link" onClick={ () => {linkStyle(0);} }>Rockets</NavLink></li>
-          <li><NavLink to="/missions" className="nav-link" onClick={ () => {linkStyle(1);} }>Missions</NavLink></li>
+          <li><NavLink to="/rockets" className="nav-link" onClick={() => { linkStyle(0); }}>Rockets</NavLink></li>
+          <li><NavLink to="/missions" className="nav-link" onClick={() => { linkStyle(1); }}>Missions</NavLink></li>
         </ul>
       </>
       <Routes>
