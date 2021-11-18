@@ -24,9 +24,39 @@ const Nav = () => {
     <Router>
       <>
         <ul className="navbar">
-          <li><NavLink to="/rockets" className="nav-link" onClick={() => { linkStyle(0); }}>Rockets</NavLink></li>
-          <li><NavLink to="/missions" className="nav-link" onClick={() => { linkStyle(1); }}>Missions</NavLink></li>
-          <li><NavLink to="/Profile" className="nav-link" onClick={() => { linkStyle(2); }}>Profile</NavLink></li>
+          <li>
+            <NavLink
+              to="/rockets"
+              className="nav-link"
+              onClick={() => {
+                linkStyle(0);
+              }}
+            >
+              Rockets
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/missions"
+              className="nav-link"
+              onClick={() => {
+                linkStyle(1);
+              }}
+            >
+              Missions
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/Profile"
+              className="nav-link"
+              onClick={() => {
+                linkStyle(2);
+              }}
+            >
+              Profile
+            </NavLink>
+          </li>
         </ul>
       </>
       <Routes>

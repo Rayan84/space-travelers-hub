@@ -1,3 +1,38 @@
 body {
   margin: 0;
 }
+
+.ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(0, 140, 255, 0.89);
+  padding: 2%;
+  border-radius: 5%;
+  margin-right: 2%;
+}
+
+.ul li button {
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 400 !important;
+  background-color: #e63946ff;
+  color: #fff;
+  padding: 13px 40px;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.ul li button:hover {
+  background: yellowgreen;
+}
