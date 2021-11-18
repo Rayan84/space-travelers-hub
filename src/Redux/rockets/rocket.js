@@ -7,7 +7,7 @@ const FETCH_ROCKETS_FAILURE = 'rocketsStore/rockets/fetch_failure';
 const LOAD_LOCAL_ROCKETS = 'load_local';
 
 console.log(URL);
-let initialState = {
+const initialState = {
   loading: false,
   rockets: [
     {
@@ -44,7 +44,7 @@ export const fetchRockets = () => (dispatch) => {
   dispatch(fetchRocketsRequest());
   axios.get(URL, { headers: {} }).then((response) => {
     //  const data = Object.entries(response.data).map(([]))
-    const data = response.data;
+    const { data } = response;
     console.log(data);
     return data;
   });

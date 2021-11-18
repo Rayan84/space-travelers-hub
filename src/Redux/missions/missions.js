@@ -25,7 +25,7 @@ const initialState = {
 };
 
 export const loadLocal = () => ({
-  type: LOAD_LOCAL_MISSIONS
+  type: LOAD_LOCAL_MISSIONS,
 });
 export const fetchMissionsRequest = () => ({
   type: FETCH_MISSIONS_REQUEST,
@@ -33,7 +33,7 @@ export const fetchMissionsRequest = () => ({
 
 export const fetchMissionsSuccess = (payload) => ({
   type: FETCH_MISSIONS_SUCCESS,
-  payload
+  payload,
 });
 
 export const fetchMissionsFailure = () => ({
@@ -43,13 +43,11 @@ export const fetchMissionsFailure = () => ({
 export const fetchMissions = () => (dispatch) => {
   dispatch(fetchMissionsRequest());
   axios.get(URL, { headers: {} })
-  .then((response) => {
-  //  const data = Object.entries(response.data).map(([]))
-  const data = response.data;
-  console.log(data);
-
-  })
-  
+    .then((response) => {
+      //  const data = Object.entries(response.data).map(([]))
+      const { data } = response;
+      console.log(data);
+    });
 };
 
 const reducer = (state = initialState, action) => {
@@ -58,14 +56,13 @@ const reducer = (state = initialState, action) => {
       return {
         missions: action.payload,
         loading: false,
-        error:'',
+        error: '',
       };
     case LOAD_LOCAL_MISSIONS:
       return state;
     default:
       return state;
-    }
-
-}
+  }
+};
 
 export default reducer;
