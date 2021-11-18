@@ -23,11 +23,11 @@ const Nav = () => {
   return (
     <Router>
       <>
-        <ul className='navbar'>
+        <ul className="navbar">
           <li>
             <NavLink
-              to='/rockets'
-              className='nav-link'
+              to="/rockets"
+              className="nav-link"
               onClick={() => {
                 linkStyle(0);
               }}
@@ -37,8 +37,8 @@ const Nav = () => {
           </li>
           <li>
             <NavLink
-              to='/missions'
-              className='nav-link'
+              to="/missions"
+              className="nav-link"
               onClick={() => {
                 linkStyle(1);
               }}
@@ -48,8 +48,8 @@ const Nav = () => {
           </li>
           <li>
             <NavLink
-              to='/Profile'
-              className='nav-link'
+              to="/Profile"
+              className="nav-link"
               onClick={() => {
                 linkStyle(2);
               }}
@@ -60,10 +60,10 @@ const Nav = () => {
         </ul>
       </>
       <Routes>
-        <Route path='/rockets' element={<Rockets />} />
-        <Route path='/missions' element={<Missions />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/' element={<Rockets />} />
+        <Route path="/rockets" element={<Rockets />} />
+        <Route path="/missions" element={<Missions />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/" element={<Rockets />} />
       </Routes>
     </Router>
   );

@@ -25,7 +25,7 @@ const initialState = {
 };
 
 export const loadLocal = () => ({
-  type: LOAD_LOCAL_MISSIONS
+  type: LOAD_LOCAL_MISSIONS,
 });
 export const fetchMissionsRequest = () => ({
   type: FETCH_MISSIONS_REQUEST,
@@ -33,7 +33,7 @@ export const fetchMissionsRequest = () => ({
 
 export const fetchMissionsSuccess = (payload) => ({
   type: FETCH_MISSIONS_SUCCESS,
-  payload
+  payload,
 });
 
 export const fetchMissionsFailure = () => ({
@@ -58,6 +58,7 @@ export const fetchMissions = () => (dispatch) => {
   .catch((error) => {
     dispatch(fetchMissionsFailure(error.message));
   })
+
 };
 
 const reducer = (state = initialState, action) => {
@@ -66,13 +67,14 @@ const reducer = (state = initialState, action) => {
       return {
         missions: action.payload,
         loading: false,
-        error:'',
+        error: '',
       };
     case LOAD_LOCAL_MISSIONS:
       return state;
     default:
       return state;
-    }
-}
+
+  }
+};
 
 export default reducer;

@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMissions, loadLocal } from '../Redux/missions/missions';
 
@@ -9,27 +8,29 @@ const Missions = () => {
   useEffect(() => {
     dispatch(loadLocal());
   });
-  return missions.missions.map((mission) => {
-    return (
-      <>
-        <li key={mission._id}>
-          <p> {mission.mission_id}</p>
+  return missions.missions.map((mission) => (
+    <>
+      <li key={mission.id}>
+        <p>
+          {' '}
+          {mission.mission_id}
+        </p>
 
-          <h2>{mission.mission_name}</h2>
-          <p>
-            <strong>{mission.description}</strong>
-          </p>
-        </li>
-        <button
-          onClick={() => {
-            dispatch(fetchMissions());
-          }}
-        >
-          Fetch Data
-        </button>
-      </>
-    );
-  });
+        <h2>{mission.mission_name}</h2>
+        <p>
+          <strong>{mission.description}</strong>
+        </p>
+      </li>
+      <button
+        onClick={() => {
+          dispatch(fetchMissions());
+        }}
+        type="button"
+      >
+        Fetch Data
+      </button>
+    </>
+  ));
 };
 
 export default Missions;
