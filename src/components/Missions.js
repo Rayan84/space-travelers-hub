@@ -1,8 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import fetchMissions from '../Redux/missions/missions';
-import { loadLocal } from '../Redux/missions/missions';
+import { fetchMissions, loadLocal } from '../Redux/missions/missions';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
@@ -12,17 +11,19 @@ const Missions = () => {
   },);
   return missions.missions.map((mission) => {
     return (
+      <>
       <li key={mission._id}>
-        <a href={"#" + mission._id}>
-        </a>
+       <p> {mission.mission_id}</p>
 
+        <h2>
+          {mission.mission_name}
+        </h2>
         <p>
-          <a href="#">{mission.name}</a>
-        </p>
-        <p>
-          <strong>${mission.description}.00</strong>
+          <strong>{mission.description}</strong>
         </p>
       </li>
+      <button onClick={() => { dispatch(fetchMissions())}}>Fetch Data</button>
+      </>
     );
   });
 };

@@ -40,18 +40,17 @@ export const fetchMissionsFailure = () => ({
   type: FETCH_MISSIONS_FAILURE,
 });
 
-export const fetchMissions = () => {
-  
-}
+export const fetchMissions = () => (dispatch) => {
+  dispatch(fetchMissionsRequest());
+  axios.get(URL, { headers: {} })
+  .then((response) => {
+  //  const data = Object.entries(response.data).map(([]))
+  const data = response.data;
+  console.log(data);
 
-const getMissions = () => (dispatch) => {
-  dispatch()
-  axios.get(URL)
-  .then(response => {
-    console.log(response.data.mission_name);
   })
   
-}
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
