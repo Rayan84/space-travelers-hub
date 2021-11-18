@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,6 +6,7 @@ import {
 } from 'react-router-dom';
 import Rockets from './Rockets';
 import Missions from './Missions';
+import Profile from './Profle';
 
 const Nav = () => {
   function linkStyle(num) {
@@ -26,11 +26,13 @@ const Nav = () => {
         <ul className="navbar">
           <li><NavLink to="/rockets" className="nav-link" onClick={() => { linkStyle(0); }}>Rockets</NavLink></li>
           <li><NavLink to="/missions" className="nav-link" onClick={() => { linkStyle(1); }}>Missions</NavLink></li>
+          <li><NavLink to="/Profile" className="nav-link" onClick={() => { linkStyle(2); }}>Profile</NavLink></li>
         </ul>
       </>
       <Routes>
         <Route path="/rockets" element={<Rockets />} />
         <Route path="/missions" element={<Missions />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/" element={<Rockets />} />
       </Routes>
     </Router>
