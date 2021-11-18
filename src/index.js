@@ -7,12 +7,12 @@ import { Provider } from 'react-redux';
 import store from './Redux/configureStore';
 
 ReactDOM.render(
-  <Provider store={store}>
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>,
     </React.StrictMode>,
     document.getElementById('root'),
-  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
