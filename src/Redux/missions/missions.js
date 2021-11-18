@@ -44,12 +44,20 @@ export const fetchMissions = () => (dispatch) => {
   dispatch(fetchMissionsRequest());
   axios.get(URL, { headers: {} })
   .then((response) => {
-  //  const data = Object.entries(response.data).map(([]))
-  const data = response.data;
-  console.log(data);
-
+    const data = Object.values(response.data);
+  let arr = [];
+  for (let i = 0; i < data.length; i += 1){
+    let obj = {};
+    obj.mission_id = data[i].mission_id;
+    obj.mission_name = data[i].mission_name;
+    obj.description = data[i].description;
+    arr.push(obj);
+  }
+  dispatch(fetchMissionsSuccess(arr));
   })
-  
+  .catch((error) => {
+    dispatch(fetchMissionsFailure(error.message));
+  })
 };
 
 const reducer = (state = initialState, action) => {
@@ -65,7 +73,6 @@ const reducer = (state = initialState, action) => {
     default:
       return state;
     }
-
 }
 
 export default reducer;
