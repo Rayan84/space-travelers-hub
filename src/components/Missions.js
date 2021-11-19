@@ -40,7 +40,6 @@ const Missions = () => {
               <td>{mission.joined ? ('ACTIVE MEMBER') : ('NOT A MEMBER')}</td>
               <td>
                 <button type="button" onClick={() => { dispatch(joinLeaveMission(mission.mission_id)); }}>{mission.joined ? ('Leave Mission') : ('Join Mission') }</button>
-                <button type="button">{mission.mission_id}</button>
               </td>
             </tr>
           ))}
