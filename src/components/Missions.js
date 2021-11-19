@@ -6,7 +6,7 @@ import { joinMission } from '../Redux/missions/missions';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
-  //  const dispatch = useDispatch();
+  const dispatch = useDispatch();
   useEffect(() => {
     if (missions.missions.length === 0) {
       // const initialFetch = async () => {
@@ -24,7 +24,6 @@ const Missions = () => {
   // store.dispatch(fetchMissions());
   // document.onload(dispatch(fetchMissions()));
 
-
   return (
     <>
       <table className="missions-table">
@@ -41,9 +40,16 @@ const Missions = () => {
             <tr key={mission.mission_id}>
               <td>{mission.mission_name}</td>
               <td>{mission.description}</td>
-              <td>{mission.joined ? ('ACTIVE MEMBER') : ('NOT A MEMBER')}</td>
+              <td>{mission.joined ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}</td>
               <td>
-                <button type="button" onClick={() => { dispatch(joinMission(mission.mission_id)); }}>{mission.joined ? ('Leave Mission') : ('Join Mission') }</button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    dispatch(joinMission(mission.mission_id));
+                  }}
+                >
+                  {mission.joined ? 'Leave Mission' : 'Join Mission'}
+                </button>
                 <button type="button">{mission.mission_id}</button>
               </td>
             </tr>

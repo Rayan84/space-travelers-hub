@@ -1,0 +1,42 @@
+.ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+}
+
+.ul li {
+  margin: 5%;
+  align-items: start;
+}
+
+img {
+    margin: 5%;
+    align-self: center;
+}
+
+.button {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 400 !important;
+    background-color: rgb(57, 118, 230);
+    color: #fff;
+    padding: 15px 30px;
+    margin: auto;
+    text-align: center;
+    display: inline-block !important;
+    text-decoration: none;
+    border: 0px;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.04, 1);
+    background-color: rgb(216, 10, 27);
+    text-decoration: none;
+}
+.button:active {
+  background: white;
+  color: black;
+  border: 1px solid red;
+}
