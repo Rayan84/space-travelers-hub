@@ -1,24 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { joinLeaveMission } from '../Redux/missions/missions';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
-  useEffect(() => {
-    if (missions.missions.length === 0) {
-      // const initialFetch = async () => {
-      //   await dispatch(fetchMissions());
-      // };
-      // initialFetch();
-    } else {
-      console.log('============');
-      console.log(missions.missions.length);
+  // useEffect(() => {
+  //   // fetch api call goes in here
+  //   dispatch(loadData());
+  // }, []);
 
-      // console.log('============');
-      // console.log(missions.missions.length);
-    }
-  });
   // store.dispatch(fetchMissions());
   // document.onload(dispatch(fetchMissions()));
 

@@ -4,6 +4,7 @@ const URL = 'https://api.spacexdata.com/v3/missions';
 const FETCH_MISSIONS_REQUEST = 'missionsStore/missions/fetch_request';
 const FETCH_MISSIONS_SUCCESS = 'missionsStore/missions/fetch_success';
 const FETCH_MISSIONS_FAILURE = 'missionsStore/missions/fetch_failure';
+// const LOAD_DATA = 'missionStore/mission/load_data';
 
 const JOIN_LEAVE_MISSION = 'missionStore/missions/join_mission';
 
