@@ -4,11 +4,15 @@ import {
   NavLink,
   Route,
 } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
+import Profile from './Profle';
 import Rockets from './Rockets';
 import Missions from './Missions';
-import Profile from './Profle';
+import { fetchMissions } from '../Redux/missions/missions';
 
 const Nav = () => {
+  const dispatch = useDispatch();
   function linkStyle(num) {
     const links = document.querySelectorAll('.nav-link');
     for (let i = 0; i < links.length; i += 1) {
@@ -23,7 +27,7 @@ const Nav = () => {
   return (
     <Router>
       <>
-        <ul className="navbar">
+        <ul className="navbar" onLoad="">
           <li>
             <NavLink
               to="/rockets"
@@ -40,7 +44,7 @@ const Nav = () => {
               to="/missions"
               className="nav-link"
               onClick={() => {
-                linkStyle(1);
+                linkStyle(1); dispatch(fetchMissions());
               }}
             >
               Missions
