@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// import { fetchMissions } from '../Redux/missions/missions';
-// import store from '../Redux/configureStore';
 import { joinLeaveMission } from '../Redux/missions/missions';
 
 const Missions = () => {
