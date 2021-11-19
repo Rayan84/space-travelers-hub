@@ -22,7 +22,7 @@ const Missions = () => {
 
   return (
     <>
-      <table>
+      <table className="missions-table">
         <thead>
           <tr>
             <td>Mission</td>
@@ -40,10 +40,8 @@ const Missions = () => {
               <td><button type="button">Join Mission</button></td>
             </tr>
           ))}
-          ;
         </tbody>
       </table>
-
     </>
   );
 };
