@@ -11,14 +11,18 @@ const initialState = {
   loading: false,
   rockets: [
     {
-      rocket_id: 1,
+      id: 1,
       rocket_name: 'LauncherOne',
       description: 'a wonderful Rocket',
+      flickr_images:
+        'https://farm4.staticflickr.com/3914/15118079089_489aa62638_b.jpg',
     },
     {
-      rocket_id: 2,
+      id: 2,
       rocket_name: 'SpaceX Starship',
-      description: 'created by spaceX elon',
+      description: 'created by spaceX company',
+      flickr_images:
+        'https://farm4.staticflickr.com/3914/15118079089_489aa62638_b.jpg',
     },
   ],
   error: '',
@@ -42,12 +46,24 @@ export const fetchRocketsFailure = () => ({
 
 export const fetchRockets = () => (dispatch) => {
   dispatch(fetchRocketsRequest());
-  axios.get(URL, { headers: {} }).then((response) => {
-    //  const data = Object.entries(response.data).map(([]))
-    const { data } = response;
-    console.log(data);
-    return data;
-  });
+  axios
+    .get(URL, { headers: {} })
+    .then((response) => {
+      const data = Object.values(response.data);
+      const arr = [];
+      for (let i = 0; i < data.length; i += 1) {
+        const obj = {};
+        obj.id = data[i].id;
+        obj.rocket_name = data[i].rocket_name;
+        obj.description = data[i].description;
+        obj.flickr_images = data[i].flickr_images;
+        arr.push(obj);
+      }
+      dispatch(fetchRocketsSuccess(arr));
+    })
+    .catch((error) => {
+      dispatch(fetchRocketsFailure(error.message));
+    });
 };
 
 const reducer = (state = initialState, action) => {
