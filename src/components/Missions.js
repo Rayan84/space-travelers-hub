@@ -23,21 +23,29 @@ const Missions = () => {
   return missions.missions.map((mission) => (
     <>
       <li key={mission.id}>
-        <p>
-          {' '}
-          {mission.mission_id}
-        </p>
-
         <h2>{mission.mission_name}</h2>
-        <p>
-          <strong>{mission.description}</strong>
-        </p>
+        <p>{mission.description}</p>
       </li>
-      <button
-        type="button"
-      >
-        Fetch Data
-      </button>
+      <table>
+        <thead>
+          <tr>
+            <td>Mission</td>
+            <td>Description</td>
+            <td>Status</td>
+            <td />
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{mission.mission_name}</td>
+            <td>{mission.description}</td>
+            <td>NOT A MEMBER</td>
+            <td><button type="button">Join Mission</button></td>
+          </tr>
+        </tbody>
+
+      </table>
+
     </>
   ));
 };

@@ -27,7 +27,7 @@ const Nav = () => {
   return (
     <Router>
       <>
-        <ul className="navbar">
+        <ul className="navbar" onLoad="">
           <li>
             <NavLink
               to="/rockets"
