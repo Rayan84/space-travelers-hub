@@ -78,8 +78,8 @@ const reducer = (state = initialState, action) => {
       // console.log(state);
       // console.log(state.missions);
       const newState = {
-        loading: false,
-        error: '',
+        loading: state.loading,
+        error: state.error,
       };
       newState.missions = state.missions.map((mission) => {
         console.log(state);

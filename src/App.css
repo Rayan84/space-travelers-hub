@@ -50,10 +50,6 @@ table {
   border-collapse: collapse;
 }
 
-thead td {
-  font-weight: bolder;
-}
-
 td {
   border: 1px solid lightblue;
   border-radius: 5px;
@@ -61,10 +57,14 @@ td {
   padding: 5px;
 }
 
-tr:nth-child(even) { 
+thead td {
+  font-weight: bolder;
+}
+
+tr:nth-child(even) {
   background: rgb(231, 223, 223);
 }
 
 tr:nth-child(odd) {
-  background: #FFF;
+  background: #fff;
 }
