@@ -10,31 +10,32 @@
 }
 
 img {
-    margin: 5%;
-    align-self: center;
+  margin: 5%;
+  align-self: center;
 }
 
 .button {
-    font-size: 16px;
-    letter-spacing: 2px;
-    font-weight: 400 !important;
-    background-color: rgb(57, 118, 230);
-    color: #fff;
-    padding: 15px 30px;
-    margin: auto;
-    text-align: center;
-    display: inline-block !important;
-    text-decoration: none;
-    border: 0px;
-    cursor: pointer;
-    transition: all 0.3s 0s ease-in-out;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 400 !important;
+  background-color: rgb(57, 118, 230);
+  color: #fff;
+  padding: 15px 30px;
+  margin: auto;
+  text-align: center;
+  display: inline-block !important;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s 0s ease-in-out;
 }
 
 .button:hover {
-    transform: scale(1.04, 1);
-    background-color: rgb(216, 10, 27);
-    text-decoration: none;
+  transform: scale(1.04, 1);
+  background-color: rgb(216, 10, 27);
+  text-decoration: none;
 }
+
 .button:active {
   background: white;
   color: black;
