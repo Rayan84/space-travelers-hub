@@ -20,12 +20,8 @@ const Missions = () => {
   // store.dispatch(fetchMissions());
   // document.onload(dispatch(fetchMissions()));
 
-  return missions.missions.map((mission) => (
+  return (
     <>
-      <li key={mission.id}>
-        <h2>{mission.mission_name}</h2>
-        <p>{mission.description}</p>
-      </li>
       <table>
         <thead>
           <tr>
@@ -36,18 +32,20 @@ const Missions = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>{mission.mission_name}</td>
-            <td>{mission.description}</td>
-            <td>NOT A MEMBER</td>
-            <td><button type="button">Join Mission</button></td>
-          </tr>
+          {missions.missions.map((mission) => (
+            <tr key={mission.id}>
+              <td>{mission.mission_name}</td>
+              <td>{mission.description}</td>
+              <td>NOT A MEMBER</td>
+              <td><button type="button">Join Mission</button></td>
+            </tr>
+          ))}
+          ;
         </tbody>
-
       </table>
 
     </>
-  ));
+  );
 };
 
 export default Missions;
