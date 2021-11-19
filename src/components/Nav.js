@@ -4,12 +4,9 @@ import {
   NavLink,
   Route,
 } from 'react-router-dom';
-// import { useDispatch } from 'react-redux';
-
 import Profile from './Profle';
 import Rockets from './Rockets';
 import Missions from './Missions';
-// import { fetchMissions } from '../Redux/missions/missions';
 
 const Nav = () => {
 //  const dispatch = useDispatch();
@@ -26,8 +23,9 @@ const Nav = () => {
 
   return (
     <Router>
-      <>
-        <ul className="navbar" onLoad="">
+      <div className="display-flex justify-content-space-between nav-container">
+        <img src="logo.png" className="App-logo" alt="logo" />
+        <ul className="navbar">
           <li>
             <NavLink
               to="/rockets"
@@ -62,7 +60,7 @@ const Nav = () => {
             </NavLink>
           </li>
         </ul>
-      </>
+      </div>
       <Routes>
         <Route path="/rockets" element={<Rockets />} />
         <Route path="/missions" element={<Missions />} />

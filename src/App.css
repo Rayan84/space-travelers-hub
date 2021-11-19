@@ -1,15 +1,24 @@
 .App-logo {
-  height: 40vmin;
+  height: 5vmin;
   pointer-events: none;
+  margin: 0;
+  margin-left: 15px;
+}
+
+.nav-container {
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .navbar {
   display: flex;
+  padding-right: 15px;
 }
 
 .navbar li {
   list-style: none;
-  margin: 15px;
+  margin-left: 15px;
 }
 
 .nav-link {
@@ -28,12 +37,11 @@
   padding-right: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #618afb;
 }
 
 @keyframes App-logo-spin {
@@ -71,4 +79,18 @@ tr:nth-child(odd) {
 
 .display-flex {
   display: flex;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.profile-section {
+  border: 1px solid lightgray;
+  padding: 25px;
+  border-radius: 6px;
+  border-collapse: collapse;
+  margin: 3px;
+  min-width: 400px;
+  min-height: 350px;
 }
