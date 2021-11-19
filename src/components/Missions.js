@@ -1,13 +1,25 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions, loadLocal } from '../Redux/missions/missions';
+import { useSelector } from 'react-redux';
+// import { fetchMissions } from '../Redux/missions/missions';
+// import store from '../Redux/configureStore';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
-  const dispatch = useDispatch();
+  //  const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(loadLocal());
+    if (missions.missions.length === 0) {
+      // const initialFetch = async () => {
+      //   await dispatch(fetchMissions());
+      // };
+      // initialFetch();
+    } else {
+      console.log('============');
+      console.log(missions.missions.length);
+    }
   });
+  // store.dispatch(fetchMissions());
+  // document.onload(dispatch(fetchMissions()));
+
   return missions.missions.map((mission) => (
     <>
       <li key={mission.id}>
@@ -22,9 +34,6 @@ const Missions = () => {
         </p>
       </li>
       <button
-        onClick={() => {
-          dispatch(fetchMissions());
-        }}
         type="button"
       >
         Fetch Data
