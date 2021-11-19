@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 // import { fetchMissions } from '../Redux/missions/missions';
 // import store from '../Redux/configureStore';
-import { joinMission } from '../Redux/missions/missions';
+import { joinLeaveMission } from '../Redux/missions/missions';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
@@ -39,7 +39,7 @@ const Missions = () => {
               <td>{mission.description}</td>
               <td>{mission.joined ? ('ACTIVE MEMBER') : ('NOT A MEMBER')}</td>
               <td>
-                <button type="button" onClick={() => { dispatch(joinMission(mission.mission_id)); }}>{mission.joined ? ('Leave Mission') : ('Join Mission') }</button>
+                <button type="button" onClick={() => { dispatch(joinLeaveMission(mission.mission_id)); }}>{mission.joined ? ('Leave Mission') : ('Join Mission') }</button>
                 <button type="button">{mission.mission_id}</button>
               </td>
             </tr>
