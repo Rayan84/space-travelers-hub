@@ -14,6 +14,9 @@ const Missions = () => {
       // };
       // initialFetch();
     } else {
+      console.log('============');
+      console.log(missions.missions.length);
+
       // console.log('============');
       // console.log(missions.missions.length);
     }
@@ -37,7 +40,7 @@ const Missions = () => {
             <tr key={mission.mission_id}>
               <td>{mission.mission_name}</td>
               <td>{mission.description}</td>
-              <td>{mission.joined ? ('ACTIVE MEMBER') : ('NOT A MEMBER')}</td>
+              <td>{mission.joined ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}</td>
               <td>
                 <button type="button" onClick={() => { dispatch(joinLeaveMission(mission.mission_id)); }}>{mission.joined ? ('Leave Mission') : ('Join Mission') }</button>
                 <button type="button">{mission.mission_id}</button>

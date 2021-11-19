@@ -4,6 +4,7 @@ const URL = 'https://api.spacexdata.com/v3/missions';
 const FETCH_MISSIONS_REQUEST = 'missionsStore/missions/fetch_request';
 const FETCH_MISSIONS_SUCCESS = 'missionsStore/missions/fetch_success';
 const FETCH_MISSIONS_FAILURE = 'missionsStore/missions/fetch_failure';
+
 const JOIN_LEAVE_MISSION = 'missionStore/missions/join_mission';
 
 const initialState = {
@@ -72,6 +73,7 @@ const reducer = (state = initialState, action) => {
         error: '',
         missions: [],
       };
+
     case JOIN_LEAVE_MISSION: {
       console.log('Case: JOIN_MISSION');
       // console.log(action.payload);
