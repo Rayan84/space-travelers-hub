@@ -4,12 +4,18 @@ const URL = 'https://api.spacexdata.com/v3/missions';
 const FETCH_MISSIONS_REQUEST = 'missionsStore/missions/fetch_request';
 const FETCH_MISSIONS_SUCCESS = 'missionsStore/missions/fetch_success';
 const FETCH_MISSIONS_FAILURE = 'missionsStore/missions/fetch_failure';
+const JOIN_MISSION = 'missionStore/missions/join_mission';
 
 const initialState = {
   loading: false,
   missions: [],
   error: '',
 };
+
+export const joinMission = (payload) => ({
+  type: JOIN_MISSION,
+  payload,
+});
 
 export const fetchMissionsRequest = () => ({
   type: FETCH_MISSIONS_REQUEST,
@@ -36,6 +42,7 @@ export const fetchMissions = () => (dispatch) => {
         obj.mission_id = data[i].mission_id;
         obj.mission_name = data[i].mission_name;
         obj.description = data[i].description;
+        obj.joined = false;
         arr.push(obj);
       }
       dispatch(fetchMissionsSuccess(arr));
@@ -65,6 +72,34 @@ const reducer = (state = initialState, action) => {
         error: '',
         missions: [],
       };
+    case JOIN_MISSION: {
+      console.log('Case: JOIN_MISSION');
+      // console.log(action.payload);
+      // console.log(state);
+      // console.log(state.missions);
+      const newState = {
+        loading: false,
+        error: '',
+      };
+      newState.missions = state.missions.map((mission) => {
+        console.log(state);
+        if (mission.mission_id !== action.payload) {
+          // console.log(mission);
+          return mission;
+        }
+
+        const changedMission = mission;
+        changedMission.joined = true;
+        // console.log(changedMission);
+        return changedMission;
+        // console.log('===============final return============');
+
+        // console.log({ ...state, changedMission });
+        // return { ...state.loading, ...state.error, ..., newState };
+      });
+
+      return newState;
+    }
     default:
       return state;
   }
