@@ -68,3 +68,7 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
   background: #fff;
 }
+
+.display-flex {
+  display: flex;
+}

@@ -52,7 +52,7 @@ const Nav = () => {
           </li>
           <li>
             <NavLink
-              to="/Profile"
+              to="/profile"
               className="nav-link"
               onClick={() => {
                 linkStyle(2);
