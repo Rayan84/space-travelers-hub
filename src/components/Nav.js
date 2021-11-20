@@ -9,7 +9,6 @@ import Rockets from './Rockets';
 import Missions from './Missions';
 
 const Nav = () => {
-//  const dispatch = useDispatch();
   function linkStyle(num) {
     const links = document.querySelectorAll('.nav-link');
     for (let i = 0; i < links.length; i += 1) {
