@@ -8,12 +8,6 @@ describe('test fetching rockets', () => {
     });
   });
 
-  it('test fetching rocket img', async () => {
-    await fetchRockets().then((rockets) => {
-      expect(rockets[0].img).toBe('image_URL1');
-    });
-  });
-
   it('test fetching rocket description', async () => {
     await fetchRockets().then((rockets) => {
       expect(rockets[0].desc).toBe('some text1');
