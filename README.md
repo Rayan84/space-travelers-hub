@@ -42,7 +42,7 @@ in your browser open http://localhost:3000/
 
 - GitHub: [@isaka-lumato](https://github.com/isaka-lumato)
 - Twitter: [@Rayan65096267](https://twitter.com/Rayan65096267)
-- LinkedIn: [Isaka Lumato](hhttps://www.linkedin.com/in/isaka-william-90773020b/)
+- LinkedIn: [Isaka Lumato](https://www.linkedin.com/in/isaka-william-90773020b/)
 
 👤 **Rayan Rassam**
 
