@@ -24,6 +24,11 @@
 .nav-link {
   color: coral;
   text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav-link:hover {
+  color: rgb(90, 5, 5);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -59,10 +64,20 @@ table {
 }
 
 td {
-  border: 1px solid lightblue;
+  border: 1px solid rgb(11, 105, 136, 0.2);
   border-radius: 5px;
   margin: 0;
-  padding: 5px;
+  padding: 15px;
+  max-width: 650px;
+}
+
+.join-button-container {
+  padding: 0;
+  width:  150px;
+}
+
+.status-container {
+  min-width: 150px;
 }
 
 thead td {
@@ -81,6 +96,11 @@ tr:nth-child(odd) {
   display: flex;
 }
 
+.name-column {
+  font-weight: 500;
+  max-width: 150px;
+}
+
 .justify-content-space-between {
   justify-content: space-between;
 }
@@ -91,6 +111,13 @@ tr:nth-child(odd) {
   border-radius: 6px;
   border-collapse: collapse;
   margin: 3px;
-  min-width: 400px;
-  min-height: 350px;
+
+}
+
+.profile-section-container {
+  width: 40%;
+}
+
+.text-align-center {
+  text-align: center;
 }

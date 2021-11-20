@@ -9,7 +9,7 @@ function Profile() {
   const reservedRockets = rockets.rockets.filter((rocket) => rocket.reserved === true);
   return (
     <div className="display-flex justify-content-space-between">
-      <div>
+      <div className="profile-section-container">
         <h2>My Missions</h2>
         <div className="profile-section">
           <ul>
@@ -19,7 +19,7 @@ function Profile() {
           </ul>
         </div>
       </div>
-      <div>
+      <div className="profile-section-container">
         <h2>My Rockets</h2>
         <div className="profile-section">
           <ul>
