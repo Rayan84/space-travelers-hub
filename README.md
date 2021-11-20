@@ -2,6 +2,9 @@
 
  web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions, using real live data from SpaceX API
 
+ ## Live link
+ [Link](https://trusting-stonebraker-60f031.netlify.app/)
+
 <img src='./src/screenshot-missions.png'>
 
 --------------------------------------------------------------------------
