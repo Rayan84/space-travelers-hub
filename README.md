@@ -7,7 +7,6 @@
 
 <img src='./src/screenshot-missions.png'>
 
---------------------------------------------------------------------------
 ![rocketScreenShot](https://user-images.githubusercontent.com/75973193/142727662-52843b51-1d43-41d6-a9df-e2a1ae6c533f.png)
 
 ## Built With
@@ -29,17 +28,11 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-to install the project dependencies run
-
-`npm install`
-
-### Deployment
-
-to build:
-
-`npm start`
-
-in your browser open http://localhost:3000/
+- open your terminal
+- run `cd space-travelers-hub`
+- run `npm install`
+- run `npm start`
+- on your browser open http://localhost:3000/
 
 ## Authors
 
@@ -68,3 +61,5 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
+
+
