@@ -41,3 +41,18 @@ img {
   color: black;
   border: 1px solid red;
 }
+
+.display-inline-block {
+  display: inline-block;
+  padding-left: 2%;
+  padding-right: 2%;
+  background: blue;
+  color: white;
+  border-radius: 4%;
+  padding-top: 0.4%;
+  padding-bottom: 0.4%;
+}
+
+.display-none {
+  display: none;
+}

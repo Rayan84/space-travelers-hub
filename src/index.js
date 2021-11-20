@@ -6,8 +6,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './Redux/configureStore';
 import { fetchMissions } from './Redux/missions/missions';
+import { fetchRockets } from './Redux/rockets/rocket';
 
 store.dispatch(fetchMissions());
+store.dispatch(fetchRockets());
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
