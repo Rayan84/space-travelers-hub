@@ -24,7 +24,7 @@ function Profile() {
         <div className="profile-section">
           <ul>
             {reservedRockets.map((rocket) => (
-              <li key={rocket.rocket_id}>{rocket.rocket_name}</li>
+              <li className="profile-item" key={rocket.rocket_id}>{rocket.rocket_name}</li>
             )) }
           </ul>
         </div>
