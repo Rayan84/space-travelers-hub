@@ -1,8 +1,10 @@
 .App-logo {
-  height: 5vmin;
+
+  height: 10vmin;
   pointer-events: none;
-  margin: 0;
+  margin-top: 10px;
   margin-left: 15px;
+  margin-bottom: 2px;
 }
 
 .nav-container {
@@ -18,7 +20,9 @@
 
 .navbar li {
   list-style: none;
-  margin-left: 15px;
+  margin-left: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .nav-link {
@@ -76,8 +80,20 @@ td {
   width:  150px;
 }
 
-.status-container {
+.status-joined,
+.status-not-joined {
   min-width: 150px;
+  border-radius: 3px;
+  padding: 3px;
+  color:linen;
+}
+
+.status-joined {
+  background-color: rgb(174, 202, 152);
+}
+
+.status-not-joined {
+  background-color: lightseagreen;
 }
 
 thead td {
@@ -101,6 +117,26 @@ tr:nth-child(odd) {
   max-width: 150px;
 }
 
+.button-joined,
+.button-not-joined {
+  border: none;
+  color: white;
+  line-height: 2rem;
+  min-width: 3rem;
+  font-size: 1rem;
+  border-radius: 3px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.button-joined {
+  background-color: red;
+}
+
+.button-not-joined {
+  background-color: chartreuse;
+}
+
 .justify-content-space-between {
   justify-content: space-between;
 }
@@ -111,11 +147,16 @@ tr:nth-child(odd) {
   border-radius: 6px;
   border-collapse: collapse;
   margin: 3px;
-
 }
 
 .profile-section-container {
   width: 40%;
+  min-height: 1000px;
+}
+
+.profile-item {
+  font-size: 1.5rem;
+  margin: 20px;
 }
 
 .text-align-center {

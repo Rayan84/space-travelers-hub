@@ -14,7 +14,7 @@ function Profile() {
         <div className="profile-section">
           <ul>
             {joinedMissions.map((mission) => (
-              <li key={mission.mission_id}>{mission.mission_name}</li>
+              <li className="profile-item" key={mission.mission_id}>{mission.mission_name}</li>
             )) }
           </ul>
         </div>
