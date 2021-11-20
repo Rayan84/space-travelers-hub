@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets, loadLocal } from '../Redux/rockets/rocket';
+import {
+  loadLocal,
+  joinLeaveRocket,
+} from '../Redux/rockets/rocket';
 import '../css/rocket.css';
 
 const Rockets = () => {
@@ -9,13 +12,9 @@ const Rockets = () => {
   useEffect(() => {
     dispatch(loadLocal());
   });
+
   return (
-    <ul
-      className="ul"
-      onLoad={() => {
-        dispatch(fetchRockets());
-      }}
-    >
+    <ul className="ul">
       {rockets.rockets.map((rocket) => (
         <>
           <img src={rocket.flickr_images} alt="" width="200" height="200" />
@@ -26,9 +25,11 @@ const Rockets = () => {
             </p>
             <button
               type="button"
-              className="button"
+              onClick={() => {
+                dispatch(joinLeaveRocket(rocket.rocket_id));
+              }}
             >
-              Reserve Rocket
+              {rocket.reserved ? 'Leave Rocket' : 'Join Rocket'}
             </button>
           </li>
         </>
