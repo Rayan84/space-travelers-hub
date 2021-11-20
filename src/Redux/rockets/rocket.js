@@ -7,7 +7,6 @@ const FETCH_ROCKETS_FAILURE = 'rocketsStore/rockets/fetch_failure';
 const LOAD_LOCAL_ROCKETS = 'load_local';
 const JOIN_LEAVE_ROCKET = 'rocketstore/rockets/join_rocket';
 
-console.log(URL);
 const initialState = {
   loading: false,
   rockets: [],
@@ -69,18 +68,12 @@ const reducer = (state = initialState, action) => {
     case LOAD_LOCAL_ROCKETS:
       return state;
     case JOIN_LEAVE_ROCKET: {
-      console.log('Case: JOIN_ROCKET');
-      // console.log(action.payload);
-      // console.log(state);
-      // console.log(state.rockets);
       const newState = {
         loading: state.loading,
         error: state.error,
       };
       newState.rockets = state.rockets.map((rocket) => {
-        console.log(state);
         if (rocket.id !== action.payload) {
-          // console.log(rocket);
           return rocket;
         }
 
@@ -90,12 +83,7 @@ const reducer = (state = initialState, action) => {
         } else {
           changedRocket.reserved = true;
         }
-        // console.log(changedRocket);
         return changedRocket;
-        // console.log('===============final return============');
-
-        // console.log({ ...state, changedrocket });
-        // return { ...state.loading, ...state.error, ..., newState };
       });
 
       return newState;

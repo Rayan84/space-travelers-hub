@@ -4,7 +4,6 @@ const URL = 'https://api.spacexdata.com/v3/missions';
 const FETCH_MISSIONS_REQUEST = 'missionsStore/missions/fetch_request';
 const FETCH_MISSIONS_SUCCESS = 'missionsStore/missions/fetch_success';
 const FETCH_MISSIONS_FAILURE = 'missionsStore/missions/fetch_failure';
-// const LOAD_DATA = 'missionStore/mission/load_data';
 
 const JOIN_LEAVE_MISSION = 'missionStore/missions/join_mission';
 
@@ -33,7 +32,6 @@ export const fetchMissionsFailure = () => ({
 });
 
 export const fetchMissions = () => (dispatch) => {
-  // console.log('fetching missions');
   dispatch(fetchMissionsRequest());
   axios.get(URL, { headers: {} })
     .then((response) => {
@@ -76,18 +74,12 @@ const reducer = (state = initialState, action) => {
       };
 
     case JOIN_LEAVE_MISSION: {
-      console.log('Case: JOIN_MISSION');
-      // console.log(action.payload);
-      // console.log(state);
-      // console.log(state.missions);
       const newState = {
         loading: state.loading,
         error: state.error,
       };
       newState.missions = state.missions.map((mission) => {
-        console.log(state);
         if (mission.mission_id !== action.payload) {
-          // console.log(mission);
           return mission;
         }
 
@@ -97,12 +89,7 @@ const reducer = (state = initialState, action) => {
         } else {
           changedMission.joined = true;
         }
-        // console.log(changedMission);
         return changedMission;
-        // console.log('===============final return============');
-
-        // console.log({ ...state, changedMission });
-        // return { ...state.loading, ...state.error, ..., newState };
       });
 
       return newState;
