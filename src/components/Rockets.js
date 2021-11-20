@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  loadLocal,
-  joinLeaveRocket,
-} from '../Redux/rockets/rocket';
+import { loadLocal, joinLeaveRocket } from '../Redux/rockets/rocket';
 import '../css/rocket.css';
 
 const Rockets = () => {
@@ -21,13 +18,24 @@ const Rockets = () => {
           <li key={rocket.id}>
             <h2>{rocket.rocket_name}</h2>
             <p>
-              <strong>{rocket.description}</strong>
+              <span
+                className={
+                  rocket.reserved ? 'display-inline-block' : 'display-none'
+                }
+              >
+                {' '}
+                reserved
+                {' '}
+
+              </span>
+              {rocket.description}
             </p>
             <button
               type="button"
               onClick={() => {
-                dispatch(joinLeaveRocket(rocket.rocket_id));
+                dispatch(joinLeaveRocket(rocket.id));
               }}
+              className="button"
             >
               {rocket.reserved ? 'Leave Rocket' : 'Join Rocket'}
             </button>

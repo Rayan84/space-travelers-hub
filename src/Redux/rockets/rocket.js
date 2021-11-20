@@ -10,22 +10,7 @@ const JOIN_LEAVE_ROCKET = 'rocketstore/rockets/join_rocket';
 console.log(URL);
 const initialState = {
   loading: false,
-  rockets: [
-    {
-      id: 1,
-      rocket_name: 'LauncherOne',
-      description: 'a wonderful Rocket',
-      flickr_images:
-        'https://farm4.staticflickr.com/3914/15118079089_489aa62638_b.jpg',
-    },
-    {
-      id: 2,
-      rocket_name: 'SpaceX Starship',
-      description: 'created by spaceX elon',
-      flickr_images:
-        'https://farm4.staticflickr.com/3914/15118079089_489aa62638_b.jpg',
-    },
-  ],
+  rockets: [],
   error: '',
 };
 
@@ -94,7 +79,7 @@ const reducer = (state = initialState, action) => {
       };
       newState.rockets = state.rockets.map((rocket) => {
         console.log(state);
-        if (rocket.rocket_id !== action.payload) {
+        if (rocket.id !== action.payload) {
           // console.log(rocket);
           return rocket;
         }
