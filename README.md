@@ -10,8 +10,6 @@
 --------------------------------------------------------------------------
 ![rocketScreenShot](https://user-images.githubusercontent.com/75973193/142727662-52843b51-1d43-41d6-a9df-e2a1ae6c533f.png)
 
-
-
 ## Built With
 
 - JavaScript
