@@ -7,7 +7,6 @@ function App() {
       <header className="App-header">
         <Nav />
       </header>
-      <img src="logo.png" className="App-logo" alt="logo" />
     </div>
   );
 }

@@ -1,20 +1,37 @@
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 2px;
+}
+
+.nav-container {
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .navbar {
   display: flex;
+  padding-right: 15px;
 }
 
 .navbar li {
   list-style: none;
-  margin: 15px;
+  margin-left: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .nav-link {
   color: coral;
   text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav-link:hover {
+  color: rgb(90, 5, 5);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -28,12 +45,11 @@
   padding-right: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #618afb;
 }
 
 @keyframes App-logo-spin {
@@ -51,10 +67,38 @@ table {
 }
 
 td {
-  border: 1px solid lightblue;
+  border: 1px solid rgb(11, 105, 136, 0.2);
   border-radius: 5px;
   margin: 0;
-  padding: 5px;
+  padding: 15px;
+  max-width: 650px;
+}
+
+.join-button-container {
+  padding: 0;
+  width: 150px;
+}
+
+.status-container {
+  width: 10rem;
+  padding: 0;
+  text-align: center;
+}
+
+.status-joined,
+.status-not-joined {
+  min-width: 150px;
+  border-radius: 3px;
+  padding: 3px;
+  color: linen;
+}
+
+.status-joined {
+  background-color: rgb(174, 202, 152);
+}
+
+.status-not-joined {
+  background-color: lightseagreen;
 }
 
 thead td {
@@ -71,4 +115,55 @@ tr:nth-child(odd) {
 
 .display-flex {
   display: flex;
+}
+
+.name-column {
+  font-weight: 500;
+  max-width: 150px;
+}
+
+.button-joined,
+.button-not-joined {
+  border: none;
+  color: white;
+  line-height: 2rem;
+  min-width: 3rem;
+  font-size: 1rem;
+  border-radius: 3px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.button-joined {
+  background-color: red;
+}
+
+.button-not-joined {
+  background-color: chartreuse;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.profile-section {
+  border: 1px solid lightgray;
+  padding: 25px;
+  border-radius: 6px;
+  border-collapse: collapse;
+  margin: 3px;
+}
+
+.profile-section-container {
+  width: 40%;
+  min-height: 1000px;
+}
+
+.profile-item {
+  font-size: 1.5rem;
+  margin: 20px;
+}
+
+.text-align-center {
+  text-align: center;
 }

@@ -5,13 +5,14 @@ import { Provider } from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './Redux/configureStore';
+import { fetchMissions } from './Redux/missions/missions';
 
+store.dispatch(fetchMissions());
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
-    ,
   </React.StrictMode>,
   document.getElementById('root'),
 );
