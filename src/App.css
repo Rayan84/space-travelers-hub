@@ -80,6 +80,12 @@ td {
   width:  150px;
 }
 
+.status-container {
+  width: 10rem;
+  padding: 0;
+  text-align: center;
+}
+
 .status-joined,
 .status-not-joined {
   min-width: 150px;

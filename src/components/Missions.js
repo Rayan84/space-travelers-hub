@@ -22,7 +22,7 @@ const Missions = () => {
             <tr key={mission.mission_id}>
               <td className="name-column">{mission.mission_name}</td>
               <td>{mission.description}</td>
-              <td><span className={mission.joined ? ('status-joined') : ('status-not-joined')}>{mission.joined ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}</span></td>
+              <td className="status-container"><span className={mission.joined ? ('status-joined') : ('status-not-joined')}>{mission.joined ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}</span></td>
               <td className="join-button-container text-align-center">
                 <button type="button" className={mission.joined ? ('button-joined') : ('button-not-joined')} onClick={() => { dispatch(joinLeaveMission(mission.mission_id)); }}>{mission.joined ? ('Leave Mission') : ('Join Mission') }</button>
               </td>
