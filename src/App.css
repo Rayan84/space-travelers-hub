@@ -25,9 +25,14 @@
 }
 
 .nav-link {
-  color: coral;
+  color: rgb(83, 83, 212);
   text-decoration: none;
   font-size: 1.5rem;
+}
+
+.border-left {
+  border-left: black solid 1px;
+  padding-left: 20px;
 }
 
 .nav-link:hover {

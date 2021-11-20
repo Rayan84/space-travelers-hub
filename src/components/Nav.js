@@ -48,7 +48,7 @@ const Nav = () => {
               Missions
             </NavLink>
           </li>
-          <li>
+          <li className="border-left">
             <NavLink
               to="/profile"
               className="nav-link"
