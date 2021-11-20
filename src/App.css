@@ -1,5 +1,4 @@
 .App-logo {
-
   height: 10vmin;
   pointer-events: none;
   margin-top: 10px;
@@ -77,7 +76,7 @@ td {
 
 .join-button-container {
   padding: 0;
-  width:  150px;
+  width: 150px;
 }
 
 .status-container {
@@ -91,7 +90,7 @@ td {
   min-width: 150px;
   border-radius: 3px;
   padding: 3px;
-  color:linen;
+  color: linen;
 }
 
 .status-joined {
